@@ -35,12 +35,12 @@ public class King extends ChessPiece {
                 for (int j = 0; j < 7; j++) {
                     if (chessBoard.board[i][j] != null) {
                         if (!chessBoard.board[i][j].getColor().equals(color) && chessBoard.board[i][j].canMoveToPosition(chessBoard, i, j, line, column)) {
-                            return false;
+                            return true;
                         }
                     }
                 }
             }
-            return true;
+            return false;
         } else return false;
     }
 
